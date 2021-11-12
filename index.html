@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        function countDown(secs,elem){
+            var element = document.getElementById(elem);
+            element.style.textAlign="center";
+            element.style.marginTop="300px";
+            element.style.fontSize="100px";
+            element.style.color="#7303d9"
+            element.innerText= +secs+ "";
+            if(secs < 1){
+                clearTimeout(timer);
+                element.innerText= "HappyBrithday!";
+            }
+            secs--;
+            var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
+        }
+
+    </script>
+
+    <div id="status"></div>
+
+
+     <script type="text/javascript">countDown(10,"status");</script>
+   
+     </body>
+</html>
